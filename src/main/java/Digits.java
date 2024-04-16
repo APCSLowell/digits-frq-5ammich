@@ -7,18 +7,28 @@ public class Digits
 
 	public Digits(int num)
 	{ 
-		while (num > 9){
-			digitList.add(num%10);
-			num = num /10;
+		// while (num > 9){
+		// 	digitList.add(num%10);
+		// 	num = num /10;
+		// }
+	 //    	digitList.add(num);
+		// ArrayList<Integer> fixer = new ArrayList <Integer>();
+		// int k = digitList.size()-1;
+		// for (int i = 0; i < digitList.size(); i++){
+		// 	fixer.add(digitList.get(k));
+		// 	k--;
+		// }
+		// digitList = fixer;
+
+		digitLit = new arrayList<Integer>();
+		if (num == 0){
+			digitList.add(0);
 		}
-	    	digitList.add(num);
-		ArrayList<Integer> fixer = new ArrayList <Integer>();
-		int k = digitList.size()-1;
-		for (int i = 0; i < digitList.size(); i++){
-			fixer.add(digitList.get(k));
-			k--;
+		int i = num;
+		while (i > 0){
+			digitList.add(0, i % 10);
+			i = i/10;
 		}
-		digitList = fixer;
 	}
 
 	public boolean isStrictlyIncreasing()
