@@ -20,7 +20,7 @@ public class Digits
 		// }
 		// digitList = fixer;
 
-		digitLit = new arrayList<Integer>();
+		digitList = new arrayList<Integer>();
 		if (num == 0){
 			digitList.add(0);
 		}
