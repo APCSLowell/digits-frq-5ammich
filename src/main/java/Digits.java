@@ -20,15 +20,14 @@ public class Digits
 		// }
 		// digitList = fixer;
 
-		digitList = new arrayList<Integer>();
-		if (num == 0){
-			digitList.add(0);
+        digitList = new ArrayList<Integer>(); 
+		if(num==0){
+			digitList.add(new Integer(0));
 		}
-		int i = num;
-		while (i > 0){
-			digitList.add(0, i % 10);
-			i = i/10;
-		}
+	    while(num!=0){
+		    digitList.add(0, new Integer(num%10));
+		    num/=10;
+	    }
 	}
 
 	public boolean isStrictlyIncreasing()
